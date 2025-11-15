@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0f, #1c1c28);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+.logo span {
+  color: #ff0066;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  color: #ff0066;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 100px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  color: #ccc;
+}
+
+.btn {
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff0066;
+}
+
+.detector {
+  text-align: center;
+  padding: 100px 50px;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  background: #1e1e2a;
+  color: #fff;
+  border: 2px solid #ff0066;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.result-box {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff0066;
+  display: inline-block;
+  min-width: 300px;
+}
+
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}

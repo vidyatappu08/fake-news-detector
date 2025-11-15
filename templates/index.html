@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection Web App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f8fafc, #e8eef2);
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            padding: 40px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: #222;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        header nav a:hover {
+            color: #007bff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-preview {
+            margin: 60px auto;
+            background: white;
+            width: 70%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+
+        .app-preview h3 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+            transition: 0.2s ease;
+        }
+
+        textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 10px rgba(0,123,255,0.2);
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f1f5f9;
+            font-size: 18px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            background: #f9fafb;
+            color: #777;
+            font-size: 15px;
+        }
+
+        footer span {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        @media(max-width: 768px) {
+            header {
+                padding: 20px 40px;
+            }
+            .hero h2 {
+                font-size: 36px;
+            }
+            .app-preview {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fake News Detector 🧠</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Detect Fake News with AI</h2>
+        <p>Instantly analyze news headlines and articles to see if they are real or fake — powered by machine learning and natural language processing.</p>
+    </section>
+
+    <section class="app-preview">
+        <h3>Try It Now</h3>
+        <textarea id="newsInput" placeholder="Paste a news headline or paragraph..."></textarea>
+        <br>
+        <button onclick="analyzeNews()">Analyze News 🔍</button>
+        <div class="result" id="resultBox">Result will appear here...</div>
+    </section>
+
+    <footer>
+        Developed by <span>Vidyaa Tappu</span> • AI & Robotics Enthusiast 🤖
+    </footer>
+
+    <script>
+        function analyzeNews() {
+            const input = document.getElementById("newsInput").value;
+            const resultBox = document.getElementById("resultBox");
+
+            if (input.trim() === "") {
+                resultBox.innerHTML = "⚠️ Please enter some news content.";
+                resultBox.style.color = "#b00020";
+                return;
+            }
+
+            // Just simulating results for frontend
+            const random = Math.random();
+            if (random > 0.5) {
+                resultBox.innerHTML = "✅ This news appears to be <b>Real</b>.";
+                resultBox.style.color = "#007b55";
+            } else {
+                resultBox.innerHTML = "🚫 This news appears to be <b>Fake</b>.";
+                resultBox.style.color = "#d00000";
+            }
+        }
+    </script>
+
+</body>
+</html>
