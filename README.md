@@ -34,7 +34,7 @@ It analyzes text input using a trained ML model and provides an instant predicti
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/vidyatappu08/fake-news-detector.git
 ````
 
 ### 2. Install dependencies
